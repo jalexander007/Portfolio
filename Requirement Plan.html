@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requirements Management Plan for NexGen Video Surveillance Management Studio</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .header, .footer {
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      color: white;
+      padding: 20px 0;
+    }
+    .header h1, .footer h2 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    .section-title {
+      border-bottom: 3px solid #007bff;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .list-group-item {
+      background-color: transparent;
+      border: none;
+    }
+    .icon {
+      color: #007bff;
+      margin-right: 10px;
+    }
+    .roadmap-item {
+      margin-bottom: 20px;
+    }
+    .roadmap-item span {
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./assets/box-seam.svg" alt="Moveit Brand Icon" height="30"> Alex's Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./Resume.html">Resume | CV</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Work Examples
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./Vision.html">Vision</a></li>
+              <li><a class="dropdown-item" href="./36monroadmap.html">Roadmap</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="./NGVMSFeatures.html">Epics | Features | User Stories</a></li>
+              <li><a class="dropdown-item" href="#">Use Cases</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">100 Day Strategic Plan</a></li>
+              <li><a class="dropdown-item" href="#">ProductDemo</a></li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid header text-center">
+    <h1>Requirements Management Plan</h1>
+    <h2>NexGen Video Surveillance Management Studio</h2>
+  </div>
+  <div class="container mt-5">
+    <section class="my-5">
+      <h2 class="section-title">Document Versioning Details</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Action</th>
+            <th>Author</th>
+            <th>Approver</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.0</td>
+            <td>2024-08-04</td>
+            <td>Initial</td>
+            <td>Jennifer Alexander</td>
+            <td>Redact</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">Contents</h2>
+      <ol>
+        <li>Introduction
+          <ol>
+            <li>Purpose</li>
+            <li>Objectives</li>
+          </ol>
+        </li>
+        <li>Roles and Responsibilities</li>
+        <li>Requirements Identification and Documentation</li>
+        <li>Requirements Analysis</li>
+        <li>Requirements Traceability</li>
+        <li>Requirements Change Management</li>
+        <li>Requirements Validation and Verification</li>
+        <li>Tools and Techniques</li>
+        <li>Communication and Reporting</li>
+        <li>Review and Approval</li>
+        <li>Training</li>
+        <li>Metrics and Monitoring</li>
+        <li>Conclusion</li>
+      </ol>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">1. Introduction</h2>
+      <h3>1.1 Purpose</h3>
+      <p>The Requirements Management Plan outlines the approach, processes, and tools that will be used to manage the requirements of the NexGen Video Surveillance Management Studio project. This plan ensures that all requirements are captured, analyzed, documented, verified, and managed throughout the project lifecycle to ensure alignment with business goals and user needs.</p>
+
+      <h3>1.2 Objectives</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-bullseye icon"></i>Ensure all stakeholder requirements are accurately captured and documented.</li>
+        <li class="list-group-item"><i class="fas fa-book icon"></i>Maintain a clear and organized repository of requirements.</li>
+        <li class="list-group-item"><i class="fas fa-comments icon"></i>Facilitate effective communication among stakeholders regarding requirements.</li>
+        <li class="list-group-item"><i class="fas fa-sync-alt icon"></i>Track and manage changes to requirements.</li>
+        <li class="list-group-item"><i class="fas fa-link icon"></i>Ensure traceability of requirements from inception through implementation and testing.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">2. Roles and Responsibilities</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Role</th>
+            <th>Responsibilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product Owner (Jennifer Alexander)</td>
+            <td>Define vision and goals, prioritize features, approve requirement changes</td>
+          </tr>
+          <tr>
+            <td>Business Analyst</td>
+            <td>Gather and document requirements, conduct requirements analysis, facilitate requirements validation sessions</td>
+          </tr>
+          <tr>
+            <td>Project Manager</td>
+            <td>Ensure adherence to the requirements management plan, coordinate requirements-related activities, manage scope changes</td>
+          </tr>
+          <tr>
+            <td>Development Team</td>
+            <td>Provide technical input on requirements feasibility, implement requirements</td>
+          </tr>
+          <tr>
+            <td>Quality Assurance (QA) Team</td>
+            <td>Validate requirements through testing, ensure requirements are testable and measurable</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">3. Requirements Identification and Documentation</h2>
+      <h3>3.1 Requirement Elicitation</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-microphone-alt icon"></i>Conduct stakeholder interviews, surveys, and workshops.</li>
+        <li class="list-group-item"><i class="fas fa-book-open icon"></i>Analyze existing systems and documentation.</li>
+        <li class="list-group-item"><i class="fas fa-pencil-alt icon"></i>Use techniques such as user stories, use cases, and scenarios.</li>
+      </ul>
+
+      <h3>3.2 Requirement Documentation</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-file-alt icon"></i>Document requirements in a clear, concise, and structured format.</li>
+        <li class="list-group-item"><i class="fas fa-database icon"></i>Use a requirements management tool (e.g., JIRA, Confluence) to store and organize requirements.</li>
+        <li class="list-group-item"><i class="fas fa-hashtag icon"></i>Ensure each requirement has a unique identifier for traceability.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">4. Requirements Analysis</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-layer-group icon"></i>Categorize requirements into functional and non-functional.</li>
+        <li class="list-group-item"><i class="fas fa-sort-amount-up icon"></i>Prioritize requirements based on business value, urgency, and dependencies.</li>
+        <li class="list-group-item"><i class="fas fa-flask icon"></i>Conduct feasibility analysis and impact assessment.</li>
+        <li class="list-group-item"><i class="fas fa-users icon"></i>Review and validate requirements with stakeholders.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">5. Requirements Traceability</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-link icon"></i>Establish traceability matrices to link requirements to business objectives, design documents, test cases, and implementation tasks.</li>
+        <li class="list-group-item"><i class="fas fa-search icon"></i>Ensure each requirement is traceable through all stages of the project lifecycle.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">6. Requirements Change Management</h2>
+      <h3>6.1 Change Control Process</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-file-signature icon"></i>Submit change requests using a standardized form.</li>
+        <li class="list-group-item"><i class="fas fa-balance-scale icon"></i>Assess the impact of changes on scope, schedule, and budget.</li>
+        <li class="list-group-item"><i class="fas fa-check-circle icon"></i>Review and approve/reject change requests in a Change Control Board (CCB) meeting.</li>
+      </ul>
+
+      <h3>6.2 Version Control</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-code-branch icon"></i>Use version control to manage changes to requirements documents.</li>
+        <li class="list-group-item"><i class="fas fa-history icon"></i>Maintain a change log to record all changes, approvals, and rationales.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">7. Requirements Validation and Verification</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-check-double icon"></i>Conduct regular reviews and walkthroughs to validate requirements.</li>
+        <li class="list-group-item"><i class="fas fa-vial icon"></i>Ensure requirements are testable and measurable.</li>
+        <li class="list-group-item"><i class="fas fa-clipboard-check icon"></i>Develop test cases and acceptance criteria based on requirements.</li>
+        <li class="list-group-item"><i class="fas fa-user-check icon"></i>Perform user acceptance testing (UAT) to verify requirements are met.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">8. Tools and Techniques</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-tools icon"></i>Use requirements management tools (e.g., JIRA, Confluence) for documentation, tracking, and traceability.</li>
+        <li class="list-group-item"><i class="fas fa-sitemap icon"></i>Utilize modeling tools (e.g., UML, BPMN) for visual representation of requirements.</li>
+        <li class="list-group-item"><i class="fas fa-pencil-ruler icon"></i>Apply techniques such as user stories, use cases, scenarios, and mockups.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">9. Communication and Reporting</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-comments icon"></i>Conduct regular meetings to review and discuss requirements.</li>
+        <li class="list-group-item"><i class="fas fa-tasks icon"></i>Provide status updates on requirements progress and changes.</li>
+        <li class="list-group-item"><i class="fas fa-file-alt icon"></i>Distribute requirement documents and updates to all relevant stakeholders.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">10. Review and Approval</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-search icon"></i>Requirements must be reviewed and approved by key stakeholders, including the Product Owner and Project Manager.</li>
+        <li class="list-group-item"><i class="fas fa-clipboard-check icon"></i>Ensure all stakeholders sign off on the final requirements before proceeding to the design and implementation phases.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">11. Training</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-chalkboard-teacher icon"></i>Provide training to team members on requirements management processes and tools.</li>
+        <li class="list-group-item"><i class="fas fa-users icon"></i>Conduct workshops to ensure stakeholders understand their roles and responsibilities in the requirements process.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">12. Metrics and Monitoring</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-chart-line icon"></i>Track metrics such as the number of requirements gathered, changes requested, and defects found during testing.</li>
+        <li class="list-group-item"><i class="fas fa-eye icon"></i>Monitor requirements status and progress through regular reports and dashboards.</li>
+      </ul>
+    </section>
+
+    <section class="my-5">
+      <h2 class="section-title">13. Conclusion</h2>
+      <p>The Requirements Management Plan ensures that all project requirements are effectively captured, analyzed, documented, and managed throughout the project lifecycle. Adhering to this plan will help ensure the success of the NexGen Video Surveillance Management Studio by meeting stakeholder needs and delivering a high-quality product.</p>
+    </section>
+  </div>
+  <div class="container-fluid footer text-center mt-5">
+    <h2>Join Us in Revolutionizing Video Surveillance</h2>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

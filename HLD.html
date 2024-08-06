@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High-Level Design Document</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .header, .footer {
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      color: white;
+      padding: 20px 0;
+    }
+    .header h1, .footer h2 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    .section-title {
+      border-bottom: 3px solid #007bff;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .list-group-item {
+      background-color: transparent;
+      border: none;
+    }
+    .icon {
+      color: #007bff;
+      margin-right: 10px;
+    }
+    .container {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid header text-center">
+    <h1>NextGen Video Surveillance Management Studio</h1>
+    <p>High-Level Design (HLD) Document</p>
+  </div>
+  <div class="container mt-5">
+    <section class="my-5">
+      <h2 class="section-title">1. Introduction</h2>
+      <p>This High-Level Design (HLD) document provides a detailed overview of the system architecture and design for the NextGen Video Surveillance Management Studio.</p>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">2. System Architecture</h2>
+      <p>The system architecture includes a client-server model with web-based clients, a central server for processing, and cloud storage for data management. Below is the architecture diagram:</p>
+      <img src="system-architecture-diagram.png" alt="System Architecture Diagram" class="img-fluid">
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">3. Component Design</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-server icon"></i>Server Component: Manages all backend processes, including video processing, analytics, and data storage.</li>
+        <li class="list-group-item"><i class="fas fa-desktop icon"></i>Client Component: Provides a web-based interface for users to interact with the system.</li>
+        <li class="list-group-item"><i class="fas fa-database icon"></i>Database Component: Stores video data, user information, and analytics results in a scalable cloud database.</li>
+        <li class="list-group-item"><i class="fas fa-shield-alt icon"></i>Security Component: Ensures data protection, compliance with HIPAA and GDPR, and secure access control.</li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">4. Interface Design</h2>
+      <p>The interface design outlines how the components interact with each other and with external systems:</p>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-arrows-alt icon"></i>API Integration: RESTful APIs for communication between client and server, and integration with third-party systems.</li>
+        <li class="list-group-item"><i class="fas fa-link icon"></i>Data Interfaces: Standardized data formats for storing and retrieving video and analytics data.</li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">5. Data Design</h2>
+      <p>The data design includes a high-level data model and database schema:</p>
+      <img src="data-design-diagram.png" alt="Data Design Diagram" class="img-fluid">
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">6. Security Design</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-lock icon"></i>Data Encryption: Encrypt all video data at rest and in transit to ensure confidentiality and integrity.</li>
+        <li class="list-group-item"><i class="fas fa-user-shield icon"></i>Access Control: Implement role-based access control (RBAC) to restrict access based on user roles.</li>
+        <li class="list-group-item"><i class="fas fa-file-contract icon"></i>Compliance: Ensure compliance with HIPAA, GDPR, and other relevant regulations.</li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">7. Conclusion</h2>
+      <p>This High-Level Design document provides a comprehensive overview of the system architecture and design for the NextGen Video Surveillance Management Studio. It serves as a foundation for the detailed design and implementation phases, ensuring all stakeholders are aligned on the project's technical direction.</p>
+    </section>
+  </div>
+  <div class="container-fluid footer text-center mt-5">
+    <h2>Building a Safer Future Together</h2>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

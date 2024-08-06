@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current vs. Target Workflow: AI Tech Support Chat Bot</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .workflow-step {
+      border: 2px solid #dee2e6;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .current-step {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    .target-step {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .workflow-arrow {
+      font-size: 30px;
+      margin: 10px 0;
+      color: #343a40;
+    }
+    .change-indicator {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      background-color: #ffc107;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .change-explanation {
+      background-color: #e2e3e5;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .visio-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .visio-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: #6c757d;
+      color: white;
+      border-radius: 50%;
+      font-size: 24px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5 mb-4 text-center">Current vs. Target Workflow: AI Tech Support Chat Bot</h1>
+
+    <div class="visio-container">
+      <!-- Current Workflow -->
+      <div class="workflow-step current-step">
+        <h4>Step 1: User Issue</h4>
+        <p>User encounters a technical issue.</p>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step current-step">
+        <h4>Step 2: Call Support</h4>
+        <p>User calls the tech support hotline.</p>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step current-step">
+        <h4>Step 3: Wait</h4>
+        <p>User waits on hold for an available agent.</p>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step current-step">
+        <h4>Step 4: Describe Issue</h4>
+        <p>User describes the issue to the support agent.</p>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step current-step">
+        <h4>Step 5: Troubleshooting</h4>
+        <p>Support agent provides troubleshooting steps.</p>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step current-step">
+        <h4>Step 6: Resolution</h4>
+        <p>Issue is resolved or escalated to a higher-level support team.</p>
+      </div>
+    </div>
+
+    <div class="visio-container mt-5">
+      <!-- Target Workflow -->
+      <div class="workflow-step target-step">
+        <h4>Step 1: User Issue</h4>
+        <p>User encounters a technical issue.</p>
+        <div class="change-indicator">1</div>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step target-step">
+        <h4>Step 2: Open Chat Bot</h4>
+        <p>User opens the AI Tech Support Chat Bot on the website.</p>
+        <div class="change-indicator">2</div>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step target-step">
+        <h4>Step 3: Describe Issue</h4>
+        <p>User types a description of the issue into the chat bot.</p>
+        <div class="change-indicator">3</div>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step target-step">
+        <h4>Step 4: Automated Response</h4>
+        <p>The chat bot processes the query and provides troubleshooting steps.</p>
+        <div class="change-indicator">4</div>
+      </div>
+      <div class="visio-arrow">&#x27A1;</div>
+      <div class="workflow-step target-step">
+        <h4>Step 5: Resolution</h4>
+        <p>Issue is resolved or escalated to a live support agent for further assistance.</p>
+        <div class="change-indicator">5</div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-12 change-explanation">
+        <h5>Explanation of Changes:</h5>
+        <ul>
+          <li><strong>Step 1: User Issue</strong> remains the same in both workflows.</li>
+          <li><strong>Step 2: Call Support</strong> is replaced by <strong>Open Chat Bot</strong> in the target workflow, indicating a shift from phone-based support to chat bot-based support.</li>
+          <li><strong>Step 3: Wait</strong> is removed in the target workflow, as the chat bot provides immediate assistance.</li>
+          <li><strong>Step 4: Describe Issue</strong> remains in both workflows but is now directed to the chat bot.</li>
+          <li><strong>Step 5: Troubleshooting</strong> is automated in the target workflow with the chat bot providing instant responses.</li>
+          <li><strong>Step 6: Resolution</strong> remains the same in concept, but in the target workflow, initial attempts are made by the chat bot, with escalation to a live agent only if necessary.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

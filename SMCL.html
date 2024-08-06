@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrum Master Checklist</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .header,
+        .footer {
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header h1,
+        .footer h2 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .section-title {
+            border-bottom: 3px solid #007bff;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .checkbox-list {
+            margin-top: 20px;
+        }
+
+        .checkbox-list label {
+            display: block;
+        }
+
+        .impediment-form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid header text-center">
+        <h1>Scrum Master Checklist</h1>
+    </div>
+    <div class="container mt-5">
+        <p><strong>Michael James</strong></p>
+        <p><strong>Revised 8 Feb 2022</strong></p>
+        <p><a href="https://scrummasterchecklist.org" target="_blank">https://scrummasterchecklist.org</a></p>
+        
+        <section class="my-5">
+            <h2 class="section-title">A Full Time Facilitator?</h2>
+            <p>An adequate Scrum Master can handle two or three teams at a time. If you're content to limit your role to organizing meetings, enforcing timeboxes, and responding to the impediments people explicitly report, you can get by with part-time attention to this role. Probably nothing catastrophic will happen.</p>
+            <p>But if you envision a team that succeeds at things they didn’t previously realize they could do, consider being a great Scrum Master.</p>
+            <p>A great Scrum Master can handle one team at a time. We recommend one dedicated Scrum Master per team of about six when starting out.</p>
+            <p>If you haven't discovered all the work there is to do, tune in to your Product Owner, your team, your team's engineering practices, and the organization outside your team. While there's no single prescription for everyone, I've outlined typical things I've seen Scrum Masters overlook. Please mark each box with √, ∆, ?, or N/A, as described on the last page.</p>
+        </section>
+        
+        <section class="my-5">
+            <h2 class="section-title">Part I -- How Is My Product Owner Doing?</h2>
+            <p>Scrum Masters improve Product Owner effectiveness in many ways.</p>
+            <div class="checkbox-list">
+                <label><input type="checkbox"> Regardless of the number of teams, is there one (and only one) Product Owner for the product?</label>
+                <label><input type="checkbox"> Is the Product Backlog prioritized according to his/her latest thinking?</label>
+                <label><input type="checkbox"> Are newly discovered requirements and desirements being captured in the Product Backlog?</label>
+                <label><input type="checkbox"> Is the Product Backlog a manageable size?</label>
+                <label><input type="checkbox"> Could any requirements (especially those near the top of the Product Backlog) be better expressed as independent, negotiable, valuable, estimable, small, and testable user stories?</label>
+                <label><input type="checkbox"> Have you educated your Product Owner about technical debt and how to avoid it?</label>
+                <label><input type="checkbox"> Is the backlog an information radiator, immediately visible to all concerned?</label>
+                <label><input type="checkbox"> If you're using an automated tool for backlog management, does everyone know how to use it easily?</label>
+                <label><input type="checkbox"> Can you help radiate information by teaching how to create big visible charts?</label>
+                <label><input type="checkbox"> Have you helped your Product Owner organize backlog items into appropriate releases or priority groups?</label>
+                <label><input type="checkbox"> Does everyone know whether the release plan still matches reality?</label>
+                <label><input type="checkbox"> Did your Product Owner adjust any release forecasts after the last Sprint Review Meeting?</label>
+            </div>
+        </section>
+
+        <section class="my-5">
+            <h2 class="section-title">Part II -- How Is My Team Doing?</h2>
+            <p>While the Scrum Master are encouraged to lead by the example of collaborating with team members on their work, there is a risk of getting lost in technical tasks. Consider your primary responsibilities to the team:</p>
+            <div class="checkbox-list">
+                <label><input type="checkbox"> Is your team in the state of flow?</label>
+                <label><input type="checkbox"> Do team members seem to like each other, goof off together, and celebrate each other's success?</label>
+                <label><input type="checkbox"> Do team members hold each other accountable to high standards, and challenge each other to grow?</label>
+                <label><input type="checkbox"> Are there issues and opportunities the team isn't discussing because they're too uncomfortable?</label>
+                <label><input type="checkbox"> Have you tried a variety of formats and locations for Sprint Retrospectives?</label>
+                <label><input type="checkbox"> Has the team kept focus on Sprint goals?</label>
+                <label><input type="checkbox"> Does the Sprint taskboard reflect what the team is actually doing?</label>
+                <label><input type="checkbox"> Does your team have 3-9 people with a sufficient mix of skills to build a potentially shippable product increment?</label>
+                <label><input type="checkbox"> Is your team's taskboard up to date?</label>
+                <label><input type="checkbox"> Are the team self-management artifacts visible to the team, convenient for the team to use?</label>
+                <label><input type="checkbox"> Are these artifacts adequately protected from meddlers?</label>
+                <label><input type="checkbox"> Do team members volunteer for tasks?</label>
+                <label><input type="checkbox"> Has the need for technical debt repayment been made explicit in the definition of done?</label>
+                <label><input type="checkbox"> Are team members leaving their job titles at the door of the team room, collectively responsible for all aspects of agreed work?</label>
+            </div>
+        </section>
+
+        <section class="my-5">
+            <h2 class="section-title">Part III -- How Are Our Engineering Practices Doing?</h2>
+            <div class="checkbox-list">
+                <label><input type="checkbox"> Does your system in development have a "push to test" button allowing anyone to conveniently detect when they've caused a regression failure?</label>
+                <label><input type="checkbox"> Do you have an appropriate balance of automated end-to-end system tests and automated unit tests?</label>
+                <label><input type="checkbox"> Is the team writing both system tests and unit tests in the same language as the system they're developing?</label>
+                <label><input type="checkbox"> Has your team discovered the useful gray area between system tests and unit tests?</label>
+                <label><input type="checkbox"> Does a continuous integration server automatically sound an alarm when someone causes a regression failure?</label>
+                <label><input type="checkbox"> Do all tests roll up into the continuous integration server result?</label>
+                <label><input type="checkbox"> Have team members discovered the joy of continuous design and constant refactoring?</label>
+                <label><input type="checkbox"> Does your definition of "done" for each Product Backlog Item include full automated test coverage and refactoring?</label>
+                <label><input type="checkbox"> Are team members pair programming or mob programming most of the time?</label>
+            </div>
+        </section>
+
+        <section class="my-5">
+            <h2 class="section-title">Part IV -- How Is The Organization Doing?</h2>
+            <div class="checkbox-list">
+                <label><input type="checkbox"> Is the appropriate amount of inter-team communication happening?</label>
+                <label><input type="checkbox"> Are teams able to produce working features, even spanning architectural boundaries?</label>
+                <label><input type="checkbox"> Are you conducting an Overall Retrospective to resolve cross-team, organizational and systemic problems within the organization?</label>
+                <label><input type="checkbox"> When appropriate, are the organizational impediments pasted to the wall of the development director's office?</label>
+                <label><input type="checkbox"> Is your organization one of the few with career paths compatible with the collective goals of your teams?</label>
+                <label><input type="checkbox"> Has your organization been recognized by the trade press or other independent sources as one of the best places to work, or a leader in your industry?</label>
+                <label><input type="checkbox"> Are you creating a learning organization?</label>
+            </div>
+        </section>
+
+        <section class="my-5">
+            <h2 class="section-title">Organizational Impediment Form</h2>
+            <div class="impediment-form">
+                <p>Surface issue:</p>
+                <textarea class="form-control" rows="2"></textarea>
+                <div>
+                    <br>
+                </div>
+                <p>Root cause (Use five times “Why?”):</p>
+                <textarea class="form-control" rows="2"></textarea>
+
+                <div>
+                    <br>
+                </div>
+                <p>Business Impact:</p>
+                <textarea class="form-control" rows="2"></textarea>
+
+                <div>
+                    <br>
+                </div>
+                <p>Emotional Impact:</p>
+                <textarea class="form-control" rows="2"></textarea>
+
+                <div>
+                    <br>
+                </div>
+                <p>Clear, actionable request:</p>
+                <textarea class="form-control" rows="2"></textarea>
+            </div>
+        </section>
+        
+        <div class="container-fluid footer text-center mt-5">
+            <h2>Join Us in Revolutionizing Scrum Practices</h2>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epics and Features for NextGen Video Surveillance Management System</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .header, .footer {
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      color: white;
+      padding: 20px 0;
+    }
+    .header h1, .footer h2 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    .section-title {
+      border-bottom: 3px solid #007bff;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .list-group-item {
+      background-color: transparent;
+      border: none;
+    }
+    .icon {
+      color: #007bff;
+      margin-right: 10px;
+    }
+    .container {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid header text-center">
+    <h1>NextGen Video Surveillance Management Studio</h1>
+    <p>Epics and Features Overview</p>
+  </div>
+  <div class="container mt-5">
+    <section class="my-5">
+      <h2 class="section-title">1. Real-Time Video Analytics</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-video icon"></i><strong>Epic 1.1: Implement Real-Time Video Streaming</strong>
+          <ul>
+            <li><strong>Feature 1.1.1:</strong> High-Quality Video Streaming
+              <ul>
+                <li>As a security manager, I want to view live video feeds from multiple cameras so that I can monitor activities in real-time.</li>
+                <li>As an IT administrator, I want to ensure the video streams are of high quality and low latency to provide accurate monitoring.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 1.1.2:</strong> Multi-Camera Support
+              <ul>
+                <li>As a security manager, I want to view feeds from multiple cameras simultaneously for comprehensive surveillance coverage.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item"><i class="fas fa-brain icon"></i><strong>Epic 1.2: Develop AI-Powered Video Analytics</strong>
+          <ul>
+            <li><strong>Feature 1.2.1:</strong> Real-Time Video Analysis
+              <ul>
+                <li>As a security manager, I want the system to analyze video feeds in real-time and detect suspicious activities so that I can respond quickly.</li>
+                <li>As a business owner, I want to receive detailed reports on detected incidents to improve security measures.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 1.2.2:</strong> Object and Face Recognition
+              <ul>
+                <li>As a security manager, I want the system to recognize and track specific objects and faces for enhanced surveillance capabilities.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">2. Incident Detection and Alerts</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-exclamation-triangle icon"></i><strong>Epic 2.1: Implement AI-Driven Incident Detection</strong>
+          <ul>
+            <li><strong>Feature 2.1.1:</strong> Suspicious Activity Detection
+              <ul>
+                <li>As a security manager, I want the system to use AI algorithms to detect incidents such as unauthorized access or suspicious behavior.</li>
+                <li>As an IT administrator, I want to configure detection parameters to reduce false positives.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 2.1.2:</strong> Customizable Detection Settings
+              <ul>
+                <li>As an IT administrator, I want to customize detection settings based on specific security requirements.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item"><i class="fas fa-bell icon"></i><strong>Epic 2.2: Develop Alert Notification System</strong>
+          <ul>
+            <li><strong>Feature 2.2.1:</strong> Instant Alerts
+              <ul>
+                <li>As a security manager, I want to receive instant alerts via SMS, email, or mobile app when an incident is detected.</li>
+                <li>As a business owner, I want to customize alert settings based on the type of incident and the time of day.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 2.2.2:</strong> Alert Management Dashboard
+              <ul>
+                <li>As a security manager, I want to manage and review alerts from a centralized dashboard.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">3. Video Storage and Retrieval</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-cloud icon"></i><strong>Epic 3.1: Implement Scalable Cloud-Based Storage</strong>
+          <ul>
+            <li><strong>Feature 3.1.1:</strong> Cloud Storage Integration
+              <ul>
+                <li>As an IT administrator, I want to store video data in the cloud to ensure scalability and accessibility.</li>
+                <li>As a security manager, I want to retrieve archived video footage quickly and efficiently for review.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 3.1.2:</strong> Data Encryption
+              <ul>
+                <li>As an IT administrator, I want to ensure all stored video data is encrypted to protect against unauthorized access.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item"><i class="fas fa-search icon"></i><strong>Epic 3.2: Develop Advanced Search and Retrieval Functions</strong>
+          <ul>
+            <li><strong>Feature 3.2.1:</strong> Advanced Search Capabilities
+              <ul>
+                <li>As a security manager, I want to search for specific video footage based on date, time, and camera location.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 3.2.2:</strong> Video Tagging and Categorization
+              <ul>
+                <li>As a business owner, I want to tag and categorize video footage for easier retrieval and analysis.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">4. User Interface and Experience</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-desktop icon"></i><strong>Epic 4.1: Design Intuitive User Interface</strong>
+          <ul>
+            <li><strong>Feature 4.1.1:</strong> User-Friendly Dashboard
+              <ul>
+                <li>As a security manager, I want a user-friendly dashboard to view live feeds, alerts, and analytics.</li>
+                <li>As a business owner, I want customizable dashboards to display the most relevant information.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 4.1.2:</strong> Customizable Widgets
+              <ul>
+                <li>As a business owner, I want to customize widgets on my dashboard to display key metrics and information.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item"><i class="fas fa-mobile-alt icon"></i><strong>Epic 4.2: Implement Mobile Application</strong>
+          <ul>
+            <li><strong>Feature 4.2.1:</strong> Mobile Access to Video Feeds
+              <ul>
+                <li>As a security manager, I want to access video feeds and alerts on my mobile device so that I can monitor activities remotely.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 4.2.2:</strong> Secure Mobile App
+              <ul>
+                <li>As an IT administrator, I want to ensure the mobile app is secure and provides the same functionality as the web interface.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">5. System Integration and API</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-plug icon"></i><strong>Epic 5.1: Develop RESTful APIs for System Integration</strong>
+          <ul>
+            <li><strong>Feature 5.1.1:</strong> API Documentation
+              <ul>
+                <li>As a third-party developer, I want to access video data and analytics through a well-documented API.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 5.1.2:</strong> API Security
+              <ul>
+                <li>As an IT administrator, I want to ensure that all API endpoints are secure and protected from unauthorized access.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item"><i class="fas fa-cogs icon"></i><strong>Epic 5.2: Implement Third-Party System Integration</strong>
+          <ul>
+            <li><strong>Feature 5.2.1:</strong> Integration with Access Control Systems
+              <ul>
+                <li>As a security manager, I want the system to integrate with existing third-party systems to provide a comprehensive security solution.</li>
+                <li>As an IT administrator, I want to ensure seamless data exchange and interoperability between systems.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 5.2.2:</strong> Integration with Alarm Systems
+              <ul>
+                <li>As a security manager, I want the system to integrate with existing alarm systems to enhance incident response capabilities.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">6. Security and Compliance</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-shield-alt icon"></i><strong>Epic 6.1: Ensure Data Security and Privacy</strong>
+          <ul>
+            <li><strong>Feature 6.1.1:</strong> Data Encryption
+              <ul>
+                <li>As an IT administrator, I want to encrypt video data at rest and in transit to protect against unauthorized access.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 6.1.2:</strong> Compliance with Data Protection Regulations
+              <ul>
+                <li>As a business owner, I want to ensure the system complies with data protection regulations (e.g., HIPAA, GDPR).</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item"><i class="fas fa-user-lock icon"></i><strong>Epic 6.2: Implement Role-Based Access Control (RBAC)</strong>
+          <ul>
+            <li><strong>Feature 6.2.1:</strong> Role-Based Permissions
+              <ul>
+                <li>As a security manager, I want to assign different access levels to users based on their roles and responsibilities.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 6.2.2:</strong> User Activity Auditing
+              <ul>
+                <li>As an IT administrator, I want to audit user activities to ensure compliance with security policies.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">7. Analytics and Reporting</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-chart-line icon"></i><strong>Epic 7.1: Develop Advanced Analytics and Reporting</strong>
+          <ul>
+            <li><strong>Feature 7.1.1:</strong> Incident Reporting
+              <ul>
+                <li>As a security manager, I want to generate detailed reports on security incidents and system performance.</li>
+                <li>As a business owner, I want to use analytics to identify trends and improve security measures.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 7.1.2:</strong> Performance Metrics
+              <ul>
+                <li>As a business owner, I want to track key performance metrics to evaluate the effectiveness of the security system.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item"><i class="fas fa-chart-pie icon"></i><strong>Epic 7.2: Implement Dashboard and Visualization Tools</strong>
+          <ul>
+            <li><strong>Feature 7.2.1:</strong> Customizable Dashboards
+              <ul>
+                <li>As a security manager, I want to visualize data through charts and graphs to gain insights into security operations.</li>
+                <li>As an IT administrator, I want to customize dashboards to display key performance indicators (KPIs) and metrics.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 7.2.2:</strong> Data Export Options
+              <ul>
+                <li>As a business owner, I want to export data and reports in various formats (e.g., PDF, CSV) for further analysis and sharing.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">8. System Maintenance and Support</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-tools icon"></i><strong>Epic 8.1: Develop Maintenance and Update Procedures</strong>
+          <ul>
+            <li><strong>Feature 8.1.1:</strong> Regular System Updates
+              <ul>
+                <li>As an IT administrator, I want to ensure the system is regularly updated with the latest security patches and features.</li>
+                <li>As a security manager, I want minimal downtime during maintenance to ensure continuous surveillance.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 8.1.2:</strong> Backup and Recovery
+              <ul>
+                <li>As an IT administrator, I want to implement regular backups and a reliable recovery process to protect data integrity.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item"><i class="fas fa-headset icon"></i><strong>Epic 8.2: Provide Technical Support and Training</strong>
+          <ul>
+            <li><strong>Feature 8.2.1:</strong> 24/7 Technical Support
+              <ul>
+                <li>As a security manager, I want access to technical support for troubleshooting and resolving system issues.</li>
+              </ul>
+            </li>
+            <li><strong>Feature 8.2.2:</strong> User Training Resources
+              <ul>
+                <li>As a business owner, I want training materials and resources to ensure my team can effectively use the system.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <div class="container-fluid footer text-center mt-5">
+    <h2>Building a Safer Future Together</h2>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

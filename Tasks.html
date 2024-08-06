@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Task List</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+    .header, .footer {
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      color: white;
+      padding: 20px 0;
+    }
+    .header h1, .footer h2 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    .section-title {
+      border-bottom: 3px solid #007bff;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-top: 30px;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .content-section {
+      margin-top: 20px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .task-list {
+      list-style: none;
+      padding: 0;
+    }
+    .task-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      cursor: move;
+    }
+    .task-list li.completed {
+      text-decoration: line-through;
+      color: #6c757d;
+    }
+    .task-list li .form-check-input {
+      margin-right: 10px;
+    }
+    .task-list li .delete-task {
+      color: #dc3545;
+      cursor: pointer;
+    }
+    .add-task-form {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .add-task-form input {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .add-task-form button {
+      flex-shrink: 0;
+    }
+    .save-tasks-btn {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .btn-primary, .btn-success {
+      background: linear-gradient(90deg, rgba(0,123,255,1) 0%, rgba(0,212,255,1) 100%);
+      border: none;
+    }
+    .btn-primary:hover, .btn-success:hover {
+      background: linear-gradient(90deg, rgba(0,123,255,0.8) 0%, rgba(0,212,255,0.8) 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid header text-center">
+    <h1>Dynamic Task List</h1>
+  </div>
+  <div class="container mt-5">
+    <section class="my-5">
+      <h2 class="section-title"><i class="fas fa-tasks icon"></i> Task List</h2>
+      <div class="content-section">
+        <form class="add-task-form" id="addTaskForm">
+          <input type="text" class="form-control" id="newTaskInput" placeholder="Add new task">
+          <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+        <ul class="task-list" id="taskList"></ul>
+        <button class="btn btn-success save-tasks-btn" id="saveTasksBtn">Save Tasks</button>
+      </div>
+    </section>
+  </div>
+  <div class="container-fluid footer text-center mt-5">
+    <h2>Manage Your Tasks Efficiently</h2>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadTasks();
+    });
+
+    document.getElementById('addTaskForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const taskInput = document.getElementById('newTaskInput');
+      const taskText = taskInput.value.trim();
+      if (taskText !== '') {
+        addTask(taskText);
+        taskInput.value = '';
+      }
+    });
+
+    document.getElementById('saveTasksBtn').addEventListener('click', saveTasks);
+
+    function addTask(taskText, isCompleted = false) {
+      const taskList = document.getElementById('taskList');
+      const taskItem = document.createElement('li');
+      taskItem.className = 'task-item';
+      taskItem.draggable = true;
+      taskItem.innerHTML = `
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" ${isCompleted ? 'checked' : ''}>
+          <label class="form-check-label">${taskText}</label>
+        </div>
+        <i class="fas fa-trash delete-task"></i>
+      `;
+      taskList.appendChild(taskItem);
+
+      taskItem.querySelector('.form-check-input').addEventListener('change', function() {
+        taskItem.classList.toggle('completed');
+      });
+
+      taskItem.querySelector('.delete-task').addEventListener('click', function() {
+        taskList.removeChild(taskItem);
+      });
+
+      taskItem.addEventListener('dragstart', function(event) {
+        event.dataTransfer.setData('text/plain', null);
+        taskItem.classList.add('dragging');
+      });
+
+      taskItem.addEventListener('dragend', function() {
+        taskItem.classList.remove('dragging');
+      });
+
+      taskItem.addEventListener('dragover', function(event) {
+        event.preventDefault();
+        const draggingItem = document.querySelector('.dragging');
+        if (taskItem !== draggingItem) {
+          const bounding = taskItem.getBoundingClientRect();
+          const offset = bounding.y + (bounding.height / 2);
+          if (event.clientY - offset > 0) {
+            taskItem.parentNode.insertBefore(draggingItem, taskItem.nextSibling);
+          } else {
+            taskItem.parentNode.insertBefore(draggingItem, taskItem);
+          }
+        }
+      });
+    }
+
+    function saveTasks() {
+      const tasks = [];
+      document.querySelectorAll('.task-item').forEach(function(taskItem) {
+        const taskText = taskItem.querySelector('.form-check-label').innerText;
+        const isCompleted = taskItem.classList.contains('completed');
+        tasks.push({ text: taskText, completed: isCompleted });
+      });
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+      alert('Tasks saved successfully!');
+    }
+
+    function loadTasks() {
+      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+      tasks.forEach(function(task) {
+        addTask(task.text, task.completed);
+      });
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

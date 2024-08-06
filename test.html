@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexGen Video Surveillance Management Studio Vision Document</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        color: #343a40;
+      }
+
+      .container {
+        margin-top: 50px;
+      }
+
+      .section-heading {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+
+      .table th,
+      .table td {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1>NexGen Video Surveillance Management Studio Vision Document</h1>
+        <p><strong>Version 1.0</strong></p>
+      </div>
+
+      <div class="section-heading">
+        <h2>Document Versioning Details</h2>
+      </div>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Action</th>
+            <th>Author</th>
+            <th>Approver</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.0</td>
+            <td>2024-08-04</td>
+            <td>Initial</td>
+            <td>Jennifer Alexander</td>
+            <td>Redact</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="section-heading">
+        <h2>Contents</h2>
+      </div>
+      <ol>
+        <li>
+          Introduction
+          <ol>
+            <li>Purpose</li>
+            <li>Stakeholders</li>
+            <li>Scope</li>
+            <li>Definitions and Abbreviations</li>
+            <li>References</li>
+          </ol>
+        </li>
+        <li>
+          Business Case
+          <ol>
+            <li>Business Opportunity/Need</li>
+            <li>Problem Statement</li>
+          </ol>
+        </li>
+        <li>
+          Requirement Categories
+          <ol>
+            <li>Stakeholders Detail</li>
+            <li>Users Roles</li>
+            <li>User Environment</li>
+            <li>User Profile</li>
+          </ol>
+        </li>
+        <li>
+          Project/Product Overview
+          <ol>
+            <li>Features</li>
+            <li>Benefits</li>
+            <li>Modules</li>
+            <li>Other Requirements</li>
+          </ol>
+        </li>
+        <li>Constraints</li>
+        <li>Dependencies and Assumptions</li>
+        <li>Cost and Pricing</li>
+        <li>Quality Control</li>
+        <li>Project Documentation</li>
+        <li>Key Milestones</li>
+        <li>Additional Details</li>
+        <li>Glossary</li>
+      </ol>
+
+      <div class="section-heading">
+        <h2>1. Introduction</h2>
+      </div>
+      <h3>1.1 Purpose</h3>
+      <p>
+        The purpose of this document is to outline the vision for the NexGen
+        Video Surveillance Management Studio project, detailing its objectives,
+        stakeholders, scope, and key requirements. This document will serve as a
+        guiding framework for the development, deployment, and operation of the
+        project, ensuring alignment with business goals and user needs.
+      </p>
+
+      <h3>1.2 Stakeholders</h3>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Stakeholder Name</th>
+            <th>Designation</th>
+            <th>Responsibilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jennifer Alexander</td>
+            <td>Product Owner</td>
+            <td>Define vision and goals, prioritize features</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>UX Designer</td>
+            <td>Design user interfaces, conduct user testing</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>Data Scientist</td>
+            <td>Develop and train AI models, analyze data</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>Backend Developer</td>
+            <td>Develop backend services, database management</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>Frontend Developer</td>
+            <td>Develop frontend interface, ensure responsiveness</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>QA Engineer</td>
+            <td>Perform testing and QA, ensure quality standards</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>DevOps Engineer</td>
+            <td>Setup CI/CD pipelines, manage deployments</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>Marketing Manager</td>
+            <td>Plan and execute marketing strategies</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>1.3 Scope</h3>
+      <p>
+        The NexGen Video Surveillance Management Studio project aims to create
+        an advanced system for managing video surveillance, including real-time
+        monitoring, AI-based analysis, multi-camera support, and robust data
+        storage solutions. The project will include the development of a
+        web-based interface, backend services, and AI models to enhance security
+        and operational efficiency.
+      </p>
+
+      <h3>1.4 Definitions and Abbreviations</h3>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Term</th>
+            <th>Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI</td>
+            <td>Artificial Intelligence</td>
+          </tr>
+          <tr>
+            <td>NLP</td>
+            <td>Natural Language Processing</td>
+          </tr>
+          <tr>
+            <td>GDPR</td>
+            <td>General Data Protection Regulation</td>
+          </tr>
+          <tr>
+            <td>CI/CD</td>
+            <td>Continuous Integration/Continuous Deployment</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>1.5 References</h3>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Reference Document Details</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SAFe Framework</td>
+            <td>Scaled Agile Framework</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="section-heading">
+        <h2>2. Business Case</h2>
+      </div>
+      <h3>2.1 Business Opportunity/Need</h3>
+      <p>
+        The NexGen Video Surveillance Management Studio addresses the need for
+        efficient, scalable, and intelligent video surveillance solutions.
+        Organizations are increasingly seeking advanced systems that can provide
+        real-time monitoring, AI-driven analytics, and support for large-scale
+        environments. This project aims to meet these demands by offering a
+        comprehensive solution that enhances security and operational
+        efficiency.
+      </p>
+
+      <h3>2.2 Problem Statement</h3>
+      <p>
+        Current video surveillance systems often lack the capability to handle
+        large-scale environments and provide real-time AI-based analysis. These
+        limitations lead to delayed responses to security incidents, increased
+        workload on human operators, and higher operational costs. The NexGen
+        Video Surveillance Management Studio aims to overcome these challenges
+        by offering a robust and scalable solution with advanced features.
+      </p>
+
+      <div class="section-heading">
+        <h2>3. High Level User Requirements</h2>
+      </div>
+      <h3>3.1 Stakeholders Detail</h3>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Stakeholder Name</th>
+            <th>Designation/Role</th>
+            <th>Responsibilities</th>
+            <th>Domains/Function</th>
+            <th>Involvement</th>
+            <th>Contact Details/Email ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jennifer Alexander</td>
+            <td>Product Owner</td>
+            <td>Define vision and goals</td>
+            <td>Product</td>
+            <td>High</td>
+            <td>alex.johnson@example.com</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>UX Designer</td>
+            <td>Design user interfaces</td>
+            <td>Design</td>
+            <td>High</td>
+            <td>casey.smith@example.com</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>Data Scientist</td>
+            <td>Develop and train AI models</td>
+            <td>AI/ML</td>
+            <td>High</td>
+            <td>morgan.davis@example.com</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>Backend Developer</td>
+            <td>Develop backend services</td>
+            <td>Development</td>
+            <td>High</td>
+            <td>jordan.brown@example.com</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>Frontend Developer</td>
+            <td>Develop frontend interface</td>
+            <td>Development</td>
+            <td>High</td>
+            <td>taylor.lee@example.com</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>QA Engineer</td>
+            <td>Perform testing and QA</td>
+            <td>QA</td>
+            <td>High</td>
+            <td>cameron.martinez@example.com</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>DevOps Engineer</td>
+            <td>Setup CI/CD pipelines</td>
+            <td>DevOps</td>
+            <td>High</td>
+            <td>riley.wilson@example.com</td>
+          </tr>
+          <tr>
+            <td>Redact</td>
+            <td>Marketing Manager</td>
+            <td>Plan and execute marketing</td>
+            <td>Marketing</td>
+            <td>Medium</td>
+            <td>jamie.anderson@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>3.2 Users Roles</h3>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Role</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Surveillance Operator</td>
+            <td>Users managing and monitoring video feeds</td>
+          </tr>
+          <tr>
+            <td>Security Analyst</td>
+            <td>Users analyzing video data for security incidents</td>
+          </tr>
+          <tr>
+            <td>Admin</td>
+            <td>Administrators managing system settings and user roles</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>3.3 User Environment</h3>
+      <p>
+        Users will interact with the surveillance management studio through a
+        web-based interface accessible on various devices, including desktops,
+        tablets, and smartphones. The backend will require a robust server
+        infrastructure to handle video processing, AI analytics, and data
+        storage.
+      </p>
+
+      <h3>3.4 User Profile</h3>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>User Type</th>
+            <th>User interaction area/domain</th>
+            <th>Responsibilities</th>
+            <th>Involvement</th>
+            <th>Deliverables</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Surveillance Operator</td>
+            <td>External</td>
+            <td>Monitor and manage video feeds</td>
+            <td>High</td>
+            <td>Video logs, incident reports</td>
+          </tr>
+          <tr>
+            <td>Security Analyst</td>
+            <td>Internal</td>
+            <td>Analyze video data</td>
+            <td>High</td>
+            <td>Analysis reports, security alerts</td>
+          </tr>
+          <tr>
+            <td>Admin</td>
+            <td>Internal</td>
+            <td>Manage system settings</td>
+            <td>Moderate</td>
+            <td>User roles, system configurations</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="section-heading">
+        <h2>4. Project/Product Overview</h2>
+      </div>
+      <h3>4.1 Features</h3>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Feature</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI Model Training</td>
+            <td>Train AI models using relevant datasets</td>
+          </tr>
+          <tr>
+            <td>Real-time Video Processing</td>
+            <td>
+              Develop an engine to process and analyze video feeds in real-time
+            </td>
+          </tr>
+          <tr>
+            <td>RESTful API Development</td>
+            <td>
+              Create APIs to facilitate communication between frontend and
+              backend
+            </td>
+          </tr>
+          <tr>
+            <td>User Interface Implementation</td>
+            <td>
+              Develop the frontend interface with HTML, CSS, and JavaScript
+              frameworks
+            </td>
+          </tr>
+          <tr>
+            <td>Responsive Design Implementation</td>
+            <td>Ensure the interface is responsive and works across devices</td>
+          </tr>
+          <tr>
+            <td>Database Schema Design</td>
+            <td>Design and implement a scalable database schema</td>
+          </tr>
+          <tr>
+            <td>Secure Data Storage</td>
+            <td>Implement secure data storage solutions</td>
+          </tr>
+          <tr>
+            <td>User Registration and Login</td>
+            <td>Add user registration and login functionality</td>
+          </tr>
+          <tr>
+            <td>Role-Based Access Control</td>
+            <td>Develop role-based access control systems</td>
+          </tr>
+          <tr>
+            <td>Video Management System</td>
+            <td>Implement a system for managing video feeds and recordings</td>
+          </tr>
+          <tr>
+            <td>AI-Based Analytics</td>
+            <td>
+              Integrate AI for analyzing video feeds and detecting anomalies
+            </td>
+          </tr>
+          <tr>
+            <td>Multi-Camera Support</td>
+            <td>Support simultaneous monitoring of multiple cameras</td>
+          </tr>
+          <tr>
+            <td>Incident Reporting</td>
+            <td>
+              Develop a system for reporting and managing security incidents
+            </td>
+          </tr>
+          <tr>
+            <td>Alert Notification System</td>
+            <td>
+              Implement a system for sending real-time alerts and notifications
+            </td>
+          </tr>
+          <tr>
+            <td>Multi-language Support</td>
+            <td>Add language detection and translation capabilities</td>
+          </tr>
+          <tr>
+            <td>Integration with External Systems</td>
+            <td>Integrate with existing security systems and tools</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>4.2 Benefits</h3>
+      <ul>
+        <li>
+          <strong>Efficiency</strong>: Automates video analysis and incident
+          detection, reducing the workload on human operators.
+        </li>
+        <li>
+          <strong>Scalability</strong>: Can handle large-scale environments with
+          multiple cameras and high data volumes.
+        </li>
+        <li>
+          <strong>User Satisfaction</strong>: Provides a comprehensive and
+          user-friendly interface for managing and analyzing video feeds.
+        </li>
+        <li>
+          <strong>Cost Savings</strong>: Reduces the need for extensive manual
+          monitoring, lowering operational costs.
+        </li>
+      </ul>
+
+      <h3>4.3 Modules</h3>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Module Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>User Management</td>
+            <td>
+              Handles user authentication, authorization, and profile management
+            </td>
+          </tr>
+          <tr>
+            <td>Video Management</td>
+            <td>Manages video feeds, recordings, and playback</td>
+          </tr>
+          <tr>
+            <td>AI Analytics</td>
+            <td>Processes and analyzes video data using AI models</td>
+          </tr>
+          <tr>
+            <td>Multi-language Support</td>
+            <td>Detects and translates multiple languages</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>4.4 Other Requirements</h3>
+      <ul>
+        <li>
+          <strong>Performance</strong>: Must handle high concurrency and provide
+          quick response times.
+        </li>
+        <li>
+          <strong>Security</strong>: Must ensure data privacy and comply with
+          regulations like GDPR.
+        </li>
+        <li>
+          <strong>Standards</strong>: Follow industry best practices for
+          software development and AI implementation.
+        </li>
+      </ul>
+
+      <div class="section-heading">
+        <h2>5. Constraints</h2>
+      </div>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Constraint</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Legal Constraints</td>
+            <td>Must comply with data protection laws such as GDPR</td>
+          </tr>
+          <tr>
+            <td>Technical Constraints</td>
+            <td>
+              Limited by current AI and video processing technology capabilities
+            </td>
+          </tr>
+          <tr>
+            <td>Financial Constraints</td>
+            <td>Budget limitations for development and deployment</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="section-heading">
+        <h2>6. Dependencies and Assumptions</h2>
+      </div>
+      <h3>Dependencies</h3>
+      <ul>
+        <li>Reliable internet connection for cloud-based AI processing.</li>
+        <li>Availability of training datasets for AI model development.</li>
+      </ul>
+      <h3>Assumptions</h3>
+      <ul>
+        <li>Users have access to devices with internet connectivity.</li>
+        <li>
+          The organization has the necessary infrastructure to support the
+          surveillance management studio.
+        </li>
+        <li>Stakeholders will provide timely feedback during development.</li>
+        <li>
+          There are no unforeseen regulatory changes affecting the project.
+        </li>
+        <li>
+          Third-party services used for translation and other functionalities
+          will remain operational.
+        </li>
+      </ul>
+
+      <div class="section-heading">
+        <h2>7. Cost and Pricing</h2>
+      </div>
+      <ul>
+        <li>
+          <strong>Manpower</strong>: Estimated cost for hiring developers, data
+          scientists, and other key roles.
+        </li>
+        <li>
+          <strong>Software</strong>: Licensing fees for AI tools, video
+          processing software, and other applications.
+        </li>
+        <li>
+          <strong>Hardware</strong>: Costs for servers and other infrastructure
+          required for deployment.
+        </li>
+        <li>
+          <strong>Third-Party Services</strong>: Fees for translation services
+          and other external APIs.
+        </li>
+      </ul>
+
+      <div class="section-heading">
+        <h2>8. Quality Control</h2>
+      </div>
+      <ul>
+        <li>
+          <strong>Quality Assurance</strong>: Regular testing cycles including
+          unit tests, integration tests, and user acceptance testing.
+        </li>
+        <li>
+          <strong>Quality Control</strong>: Continuous monitoring and logging to
+          identify and resolve issues promptly.
+        </li>
+        <li>
+          <strong>Tools</strong>: Use of automated testing tools and CI/CD
+          pipelines to ensure consistent quality.
+        </li>
+      </ul>
+
+      <div class="section-heading">
+        <h2>9. Project Documentation</h2>
+      </div>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Document Name</th>
+            <th>Description</th>
+            <th>Prepared in</th>
+            <th>Prepared by</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="./PRD.html"></a>Product Requirements Document</td>
+            <td>Detailed project requirements and specifications</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td>User Guide</td>
+            <td>Comprehensive guide for end users</td>
+            <td>Pre-Launch</td>
+            <td>Product Owner | Technical Writer</td>
+          </tr>
+          <tr>
+            <td>Test Plan</td>
+            <td>Plan for various testing activities</td>
+            <td>Development Phase</td>
+            <td>Product Owner | QA Engineer</td>
+          </tr>
+
+          <tr>
+            <td><a href="./vision.html"></a>Vision Document</td>
+            <td>
+              Develop a clear vision for the surveillance management studio
+            </td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td>Success Metrics Definition</td>
+            <td>Define KPIs to measure project success</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td>Customer Persona Development</td>
+            <td>Create detailed profiles for target users</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td>Competitive Analysis Report</td>
+            <td>Compile a comprehensive report on competitor offerings</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td><a href="./FRS.html">Functional Requiremetns Document</a></td>
+            <td>Document detailed requirements from stakeholders</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td>Prioritization Matrix</td>
+            <td>
+              Create a matrix to prioritize features based on impact and
+              feasibility
+            </td>
+
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td>User Journey Mapping</td>
+            <td>Develop user journey maps for key interactions</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td>UI Mockups</td>
+            <td>Create high-fidelity mockups of the user interface</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Business Analyst</td>
+          </tr>
+          <tr>
+            <td>Clickable Prototypes</td>
+            <td>Develop interactive prototypes for user testing</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | UX Designer</td>
+          </tr>
+          <tr>
+            <td>Architectural Blueprint</td>
+            <td>Design a detailed architectural blueprint</td>
+            <td>Initial Phase</td>
+            <td>Product Owner | Software Architect</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="section-heading">
+        <h2>10. Key Milestones</h2>
+      </div>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Milestone #</th>
+            <th>Deliverables</th>
+            <th>Due on/within</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Completion of requirements gathering</td>
+            <td>Day 45</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Completion of UI/UX design</td>
+            <td>Day 90</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Initial development of core functionalities</td>
+            <td>Day 180</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Completion of testing and QA</td>
+            <td>Day 240</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Final deployment and go-live</td>
+            <td>Day 270</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="section-heading">
+        <h2>11. Additional Details</h2>
+      </div>
+      <p>
+        <strong>Project Management Methodology</strong>: SAFe (Scaled Agile
+        Framework) methodology with regular sprints and reviews.
+      </p>
+      <p>
+        <strong>Risks</strong>: Potential risks include delays in development,
+        changes in stakeholder requirements, and technological challenges.
+      </p>
+      <p>
+        <strong>Future Phases</strong>: Plans for additional features and
+        improvements based on user feedback.
+      </p>
+
+      <div class="section-heading">
+        <h2>12. Glossary</h2>
+      </div>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Term</th>
+            <th>Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI</td>
+            <td>Artificial Intelligence</td>
+          </tr>
+          <tr>
+            <td>GDPR</td>
+            <td>General Data Protection Regulation</td>
+          </tr>
+          <tr>
+            <td>SAFe</td>
+            <td>Scaled Agile Framework</td>
+          </tr>
+          <tr>
+            <td>CI/CD</td>
+            <td>Continuous Integration/Continuous Deployment</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

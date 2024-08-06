@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Architecture Document</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .header, .footer {
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      color: white;
+      padding: 20px 0;
+    }
+    .header h1, .footer h2 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    .section-title {
+      border-bottom: 3px solid #007bff;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .list-group-item {
+      background-color: transparent;
+      border: none;
+    }
+    .icon {
+      color: #007bff;
+      margin-right: 10px;
+    }
+    .container {
+      margin-top: 30px;
+    }
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+    .diagram {
+      border: 1px solid #ddd;
+      padding: 10px;
+      background: white;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid header text-center">
+    <h1>NextGen Video Surveillance Management Studio</h1>
+    <p>System Architecture Document</p>
+  </div>
+  <div class="container mt-5">
+    <section class="my-5">
+      <h2 class="section-title">1. Introduction</h2>
+      <p>This System Architecture document provides a detailed overview of the architecture and design for the NextGen Video Surveillance Management Studio. The architecture includes components, interfaces, and data flows necessary to support the system's functionality and performance requirements.</p>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">2. System Architecture</h2>
+      <p>The system architecture comprises a client-server model with web-based clients, a central server for processing, and cloud storage for data management. Below are the architecture diagrams:</p>
+      <div class="diagram">
+        <h3 class="text-center">Overall System Architecture</h3>
+        <img src="path/to/your/system-architecture-overall.png" alt="Overall System Architecture Diagram" class="img-fluid">
+        <p class="text-center">Figure 1: Overall System Architecture</p>
+      </div>
+      <div class="diagram">
+        <h3 class="text-center">Component Interaction Diagram</h3>
+        <img src="path/to/your/component-interaction-diagram.png" alt="Component Interaction Diagram" class="img-fluid">
+        <p class="text-center">Figure 2: Component Interaction Diagram</p>
+      </div>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">3. Component Design</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-server icon"></i><strong>Server Component</strong>: Manages all backend processes, including video processing, analytics, and data storage.</li>
+        <li class="list-group-item"><i class="fas fa-desktop icon"></i><strong>Client Component</strong>: Provides a web-based interface for users to interact with the system.</li>
+        <li class="list-group-item"><i class="fas fa-database icon"></i><strong>Database Component</strong>: Stores video data, user information, and analytics results in a scalable cloud database.</li>
+        <li class="list-group-item"><i class="fas fa-shield-alt icon"></i><strong>Security Component</strong>: Ensures data protection, compliance with HIPAA and GDPR, and secure access control.</li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">4. Interface Design</h2>
+      <p>The interface design outlines how the components interact with each other and with external systems:</p>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-arrows-alt icon"></i><strong>API Integration</strong>: RESTful APIs for communication between client and server, and integration with third-party systems.</li>
+        <li class="list-group-item"><i class="fas fa-link icon"></i><strong>Data Interfaces</strong>: Standardized data formats for storing and retrieving video and analytics data.</li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">5. Data Design</h2>
+      <p>The data design includes a high-level data model and database schema:</p>
+      <div class="diagram">
+        <h3 class="text-center">High-Level Data Model</h3>
+        <img src="path/to/your/data-design-diagram.png" alt="Data Design Diagram" class="img-fluid">
+        <p class="text-center">Figure 3: High-Level Data Model</p>
+      </div>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">6. Security Design</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-lock icon"></i><strong>Data Encryption</strong>: Encrypt all video data at rest and in transit to ensure confidentiality and integrity.</li>
+        <li class="list-group-item"><i class="fas fa-user-shield icon"></i><strong>Access Control</strong>: Implement role-based access control (RBAC) to restrict access based on user roles.</li>
+        <li class="list-group-item"><i class="fas fa-file-contract icon"></i><strong>Compliance</strong>: Ensure compliance with HIPAA, GDPR, and other relevant regulations.</li>
+      </ul>
+    </section>
+    <section class="my-5">
+      <h2 class="section-title">7. Conclusion</h2>
+      <p>This System Architecture document provides a comprehensive overview of the system architecture and design for the NextGen Video Surveillance Management Studio. It serves as a foundation for the detailed design and implementation phases, ensuring all stakeholders are aligned on the project's technical direction.</p>
+    </section>
+  </div>
+  <div class="container-fluid footer text-center mt-5">
+    <h2>Building a Safer Future Together</h2>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
